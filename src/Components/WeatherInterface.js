@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import myLogo from "./myLogo.png";
 const WeatherInterface = () => {
   //!To save city name;
   const [CityName, setCityName] = useState("Chandigarh");
@@ -123,7 +124,7 @@ const WeatherInterface = () => {
             </div>
             <div className="flex flex-col justify-center items-center bg-blue-800 w-1/2 m-2 rounded-lg md:py-6 py-2">
               <img
-                className="h-20 w-20 invert "
+                className="h-20 w-20  "
                 src={`https://openweathermap.org/img/wn/${weatherObject.weatherIcon}@2x.png`}
                 alt="newClound"
               />
@@ -156,12 +157,16 @@ const WeatherInterface = () => {
       </div>
       {/* Footer */}
       <div
-        className=" py-4 text-center backdrop-blur-sm bg-black/30"
+        className=" py-4 text-center flex justify-center items-center backdrop-blur-sm bg-black/30"
         id="footer"
       >
-        <h1 className="font-Nunito text-2xl z-100 text-gray-100">
-          @weatherapplication.com
-        </h1>
+        <a
+          href="https://letmeknowmyweather.netlify.app"
+          className="font-Nunito text-2xl z-100 text-gray-100 mx-2"
+        >
+          &#169;letmeknowmyweather.netlify.app
+        </a>
+        <img src={myLogo} className="w-20 mx-2" alt="myLogo" />
       </div>
     </div>
   );
