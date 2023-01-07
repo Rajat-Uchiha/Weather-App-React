@@ -137,17 +137,19 @@ const WeatherInterface = () => {
             <div className="flex flex-col  justify-center items-center  bg-purple-800 w-1/2  m-2 rounded-lg md:py-6 py-2">
               <h2 className="text-2xl md:text-5xl  text-gray-100 py-2">
                 {weatherObject.humidity}
-                <span className="text-xl px-1 text-gray-100">%</span>
+                <span className="text-sm md:text-xl px-1 text-gray-100">%</span>
               </h2>
 
               <span className="text-md md:text-2xl  text-gray-100">
-                Humidity{" "}
+                Humidity
               </span>
             </div>
-            <div className="flex flex-col justify-center items-center bg-cyan-800 w-1/2  m-2 rounded-lg md:py-6 py-2">
-              <span className="text-2xl md:text-5xl  text-gray-100 py-2">
-                {weatherObject.speed}
-                <span className="text-xl px-1 text-gray-100">Km/hr</span>
+            <div className="flex flex-col justify-center items-center bg-cyan-800 w-1/2   m-2 rounded-lg md:py-6 py-2">
+              <span className="text-2xl md:text-5xl  text-gray-100 py-2 px-4">
+                {Math.floor(weatherObject.speed)}
+                <span className="text-sm md:text-xl px-1 text-gray-100">
+                  Km/hr
+                </span>
               </span>
 
               <span className="text-md md:text-2xl  text-gray-100">Wind </span>
@@ -162,11 +164,11 @@ const WeatherInterface = () => {
       >
         <a
           href="https://letmeknowmyweather.netlify.app"
-          className="font-Nunito text-2xl z-100 text-gray-100 mx-2"
+          className="font-Nunito md:text-2xl z-100 text-gray-100 mx-2"
         >
           &#169;letmeknowmyweather.netlify.app
         </a>
-        <img src={myLogo} className="w-20 mx-2" alt="myLogo" />
+        <img src={myLogo} className=" w-16 md:w-20 mx-2" alt="myLogo" />
       </div>
     </div>
   );
